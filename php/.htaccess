@@ -1,0 +1,8 @@
+AddHandler php8.3-script .php
+AddDefaultCharset UTF-8
+DirectoryIndex index.php
+RewriteEngine On
+RewriteRule ^klawnavi_data/ - [F]
+RewriteRule ^klawnavi_config\.php$ - [F]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
