@@ -1,3 +1,4 @@
 php/klawnavi_config.php
 __pycache__/
 outputs/
+store/apps_*.json

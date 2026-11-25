@@ -74,7 +74,7 @@ function api_interpret() {
          . "- 法令の名前や条文、罰則の話はしない。推測で事実を足さない。\n"
          . "- reply は「です・ます」の自然な日本語。";
     $usr = "質問: " . $q['text'] . "\n質問の理由: " . ($q['why'] ?? '') . "\n選択肢:\n- " . implode("\n- ", $opts) . "\n\n担当者の答え: " . $text;
-    $body = json_encode(array('model' => 'gemma4', 'temperature' => 0.1, 'max_tokens' => 400,
+    $body = json_encode(array('model' => (defined('KLN_MODEL') ? KLN_MODEL : 'gemma4'), 'temperature' => 0.1, 'max_tokens' => 400,
         'messages' => array(array('role' => 'system', 'content' => $sys), array('role' => 'user', 'content' => $usr))), JSON_UNESCAPED_UNICODE);
     $ch = curl_init(rtrim(KLN_API_BASE, '/') . '/chat/completions');
     curl_setopt_array($ch, array(CURLOPT_POST => true, CURLOPT_POSTFIELDS => $body, CURLOPT_RETURNTRANSFER => true,
@@ -147,7 +147,8 @@ function foot_html() {
     echo '<div class="cta"><img src="' . h($MASCOT) . '" alt="Kurage" width="265" height="300">'
        . '<div><b>自社の書式・自社の法令データで使いたい</b><p>このシステムは、自社のサーバーに置ける業務システムとして提供しています。'
        . '環境（エコアクション21・ISO 14001）、労働安全衛生など、ジャンルの追加や、御社の監査で使っているチェックシートの書式に合わせる改修も承ります。</p>'
-       . '<p><a class="btn" href="https://exbridge.jp/contact.php#ref=klawnavi-foot">導入・改修の相談をする</a> '
+       . '<p><a class="btn" href="https://kappstore.exbridge.jp/app.php?id=d821883093629b57&amp;ref=klawnavi-foot">Kurage App Store で見る（税込110,000円）</a> '
+       . '<a class="btn ghost" href="https://exbridge.jp/contact.php#ref=klawnavi-foot">導入・改修の相談</a> '
        . '<a class="btn ghost" href="https://exbridge.jp/ai-it-komon.html#ref=klawnavi-foot">AI-IT顧問について</a></p></div></div>';
     echo '<p class="src">チェック項目の根拠は <a href="https://laws.e-gov.go.jp/" rel="nofollow">e-Gov法令検索</a>（デジタル庁）の条文です（政府標準利用規約に従って出典を示しています）。'
        . '条例・ガイドラインは各自治体・省庁の公式ページで確かめ、確かめた日を付けています。データの更新日 ' . h($DATA['asof']) . '。<br>'
