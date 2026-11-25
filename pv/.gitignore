@@ -1,0 +1,6 @@
+build*.log
+narration.wav
+frames/
+*.json.bak
+videos_backup_*.json
+apps_backup_*.json

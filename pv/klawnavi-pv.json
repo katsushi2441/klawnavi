@@ -1,0 +1,160 @@
+{
+ "id": "klawnavi-pv",
+ "name": "Kurage 法令チェックシートAI PV",
+ "width": 1920,
+ "height": 1080,
+ "narration": {
+  "reading": "アイエスオーや、プライバシーマーク、ハサップの審査では、自社に当てはまる法令を、ぜんぶ書き出して、毎年、守れているかを確かめます。でも、どの法令が当てはまるかは、仕事の中身や設備で変わり、担当の人にも、分かりにくいものです。クラゲ、法令チェックシートエーアイは、分野を選んでインタビューを始めると、エーアイが、会社の仕事や設備のことを、一問ずつ聞きます。ボタンで選んでも、文章で答えても、大丈夫です。答え終わると、当てはまる法令の、チェック項目だけが並んだ、法令チェックシートができます。項目は、すべて、イーガブの条文で確かめたものです。エーアイに、法令を決めさせることは、ありません。エクセルに保存して、確認した日付と、結果を書き込めます。答えは、ブラウザの中だけで扱います。クラゲ、法令チェックシートエーアイ。",
+  "delay": 1.0,
+  "must_hear": [
+   "プライバシーマーク",
+   "インタビュー"
+  ],
+  "file": "/home/kojima/work/klawnavi/pv/narration.wav"
+ },
+ "scenes": [
+  {
+   "type": "clip",
+   "file": "/home/kojima/work/kpvgen/outputs/h3_queue/h3-khojo-a-8s.mp4",
+   "duration": 8,
+   "fit": "blur",
+   "audio_volume": 0.12,
+   "telop": {
+    "main": "どの法令が、うちに当てはまる？",
+    "sub": "ISO・プライバシーマーク・HACCPの審査で毎年聞かれる",
+    "at": 0.6
+   }
+  },
+  {
+   "type": "image",
+   "file": "/home/kojima/work/klawnavi/pv/caps/01-top.png",
+   "duration": 5,
+   "zoom_from": 1.02,
+   "zoom_to": 1.1,
+   "origin": [
+    "40%",
+    "25%"
+   ],
+   "telop": {
+    "main": "AIのインタビューで、法令チェックシート",
+    "sub": "Kurage 法令チェックシートAI"
+   }
+  },
+  {
+   "type": "image",
+   "file": "/home/kojima/work/klawnavi/pv/caps/02-genres.png",
+   "duration": 5,
+   "zoom_from": 1.02,
+   "zoom_to": 1.1,
+   "origin": [
+    "45%",
+    "30%"
+   ],
+   "telop": {
+    "main": "分野を選んで、インタビュー開始",
+    "sub": "情報・個人情報／食品衛生（HACCP）"
+   }
+  },
+  {
+   "type": "image",
+   "file": "/home/kojima/work/klawnavi/pv/caps/03-chat.png",
+   "duration": 7,
+   "zoom_from": 1.02,
+   "zoom_to": 1.1,
+   "origin": [
+    "45%",
+    "50%"
+   ],
+   "telop": {
+    "main": "AIが、1問ずつ聞く",
+    "sub": "ボタンでも、文章でも答えられる"
+   }
+  },
+  {
+   "type": "clip",
+   "file": "/home/kojima/work/kpvgen/outputs/h3_queue/h3-kchingin-a-8s.mp4",
+   "duration": 8,
+   "fit": "blur",
+   "audio_volume": 0.12,
+   "telop": {
+    "main": "仕事の中身と設備で、当てはまる法令が変わる",
+    "sub": "答えに合わせて、次の質問が変わる",
+    "at": 0.6
+   }
+  },
+  {
+   "type": "image",
+   "file": "/home/kojima/work/klawnavi/pv/caps/04-sheet.png",
+   "duration": 6,
+   "zoom_from": 1.02,
+   "zoom_to": 1.1,
+   "origin": [
+    "40%",
+    "25%"
+   ],
+   "telop": {
+    "main": "当てはまる項目だけのチェックシート",
+    "sub": "わからない所は「要確認」で残す"
+   }
+  },
+  {
+   "type": "image",
+   "file": "/home/kojima/work/klawnavi/pv/caps/05-table.png",
+   "duration": 5,
+   "zoom_from": 1.02,
+   "zoom_to": 1.1,
+   "origin": [
+    "35%",
+    "30%"
+   ],
+   "telop": {
+    "main": "項目は、すべてe-Govの条文で確認",
+    "sub": "AIに法令を決めさせない"
+   }
+  },
+  {
+   "type": "image",
+   "file": "/home/kojima/work/klawnavi/pv/caps/06-items.png",
+   "duration": 4,
+   "zoom_from": 1.02,
+   "zoom_to": 1.1,
+   "origin": [
+    "45%",
+    "35%"
+   ],
+   "telop": {
+    "main": "やること・頻度・確かめ方・残す記録",
+    "sub": "Excelに保存して、確認日と結果を書き込む"
+   }
+  },
+  {
+   "type": "clip",
+   "file": "/home/kojima/work/kpvgen/outputs/h3_queue/h3-komon-b-8s.mp4",
+   "duration": 8,
+   "fit": "blur",
+   "audio_volume": 0.12,
+   "telop": {
+    "main": "答えは、ブラウザの中だけ",
+    "sub": "サーバーに残さない。自社のサーバーに置ける",
+    "at": 0.6
+   }
+  },
+  {
+   "type": "endcard",
+   "duration": 7,
+   "title": "Kurage 法令チェックシートAI",
+   "sub": "AIのインタビューで、法令チェックシートを作る",
+   "url1": "デモ: proto.exbridge.jp/klawnavi/",
+   "url2": "導入版: kappstore.exbridge.jp",
+   "image": "/home/kojima/work/kurage_web/images/kurage-mascot-cutout.png",
+   "credit": "映像生成: MiniMax H3（セルフホスト）"
+  }
+ ],
+ "poster": {
+  "time": 4.0,
+  "main": "法令チェックシートを、\nAIのインタビューで",
+  "sub": "ISO 27001・プライバシーマーク・HACCP",
+  "badge": "Kurage 法令チェックシートAI",
+  "file": "/home/kojima/work/kpvgen/outputs/h3_queue/h3-khojo-a-8s.mp4"
+ }
+}
